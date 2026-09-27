@@ -1,0 +1,80 @@
+{
+  "waiver": "Fusion demandée par l'opérateur le 2026-09-27 SANS acceptation préalable des extraits. Le jeu fusionné est A_VERIFIER. Aucune loi nouvelle EXPLICITE.",
+  "n_spans_in": 46818,
+  "n_clusters": 44976,
+  "n_multi_document_wordings": 44,
+  "by_document": {
+    "PDF1_ESCOFFIER_1907": 28918,
+    "PDF2_CHARLES_CUISINE_EXPLIQUEE_EXTRAIT": 2041,
+    "PDF3_CGEN2018_COLLEGE": 672,
+    "PDF4_PNNS_GUIDE_ALIMENTAIRE": 4959,
+    "PDF5_CUISINE_MOLECULAIRE_DOC": 533,
+    "PDF6_WFP_NUTRITION_2018": 7109,
+    "PDF7_BOOKEY_MCGEE_RESUME": 722,
+    "PDF8_BOOKEY_WOLKE_RESUME": 1864
+  },
+  "tensions_documentaires": [
+    {
+      "id": "T-HIST-VS-NUTRI",
+      "documents": [
+        "PDF1_ESCOFFIER_1907",
+        "PDF4_PNNS_GUIDE_ALIMENTAIRE",
+        "PDF6_WFP_NUTRITION_2018"
+      ],
+      "description": "Manuel 1907 vs guides nutrition 2002/2018 : régimes, sel, graisses, sécurité — ne pas homogénéiser.",
+      "status": "A_VERIFIER",
+      "resolution": null
+    },
+    {
+      "id": "T-BOOKEY-NOT-ORIGINAL",
+      "documents": [
+        "PDF7_BOOKEY_MCGEE_RESUME",
+        "PDF8_BOOKEY_WOLKE_RESUME"
+      ],
+      "description": "Résumés Bookey ≠ ouvrages McGee/Wolke. Interdit de citer comme EXPLICITE McGee/Wolke.",
+      "status": "A_VERIFIER",
+      "resolution": null
+    },
+    {
+      "id": "T-EXTRAIT-INCOMPLET",
+      "documents": [
+        "PDF2_CHARLES_CUISINE_EXPLIQUEE_EXTRAIT"
+      ],
+      "description": "Couverture partielle de La Cuisine expliquée.",
+      "status": "A_VERIFIER",
+      "resolution": null
+    },
+    {
+      "id": "T-PDF5-ATTRIBUTION",
+      "documents": [
+        "PDF5_CUISINE_MOLECULAIRE_DOC"
+      ],
+      "description": "Le span source peut écrire « Nicholas Curtis » ; aucune substitution automatique par Kurti.",
+      "status": "A_VERIFIER",
+      "resolution": null
+    }
+  ],
+  "trous": [
+    {
+      "id": "G-NO-TYPED-ONTOLOGY",
+      "description": "Tous les spans sont AUTRE_TYPE_JUSTIFIE : pas d'ENTITE/PROPRIETE/TRANSFORMATION validées."
+    },
+    {
+      "id": "G-NO-GRAPH",
+      "description": "Aucun graphe ingrédient→composé→condition→effet : le construire maintenant serait une inférence."
+    },
+    {
+      "id": "G-NO-SI-UNITS",
+      "description": "Pas de normalisation SI des températures/durées (anti-invention des bornes)."
+    },
+    {
+      "id": "G-NO-NUTRITION-TABLES",
+      "description": "PDF4/PDF6 parlent nutrition mais les tableaux n'ont pas été atomisés en QUANTITE/NUTRITION."
+    },
+    {
+      "id": "G-CONTRADICTIONS-NUMERIQUES",
+      "description": "Détection automatique de contradictions numériques non effectuée : trop d'OCR, risque d'inventer des conflits."
+    }
+  ],
+  "n_clusters_with_bookey": 2409
+}
